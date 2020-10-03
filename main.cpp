@@ -44,7 +44,7 @@ int mainMenuChoice;
 CharacterSheet NewCharacter;
 
 
-int main()
+int main(int argc, char **argv)
 {
 	cout << "Welcome to the Character Creator!\n\n";
 	mainMenu();	
