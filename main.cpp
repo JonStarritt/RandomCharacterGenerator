@@ -165,7 +165,7 @@ void SaveNextQuitMenu()
 {
 	char saveNextQuitChar;
 	
-	cout << "\n\n[S]ave ~ [N]ext Character ~ [M]ain menu ~ [Q]uit";
+	cout << "\n\n[S]ave ~ [N]ext Character ~ [M]ain menu";
 	cout << "\nMake a selection and press [ENTER]: ";
 	cin >> saveNextQuitChar;
 
