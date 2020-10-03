@@ -44,10 +44,12 @@ int mainMenuChoice;
 CharacterSheet NewCharacter;
 
 
-void main()
+int main()
 {
 	cout << "Welcome to the Character Creator!\n\n";
 	mainMenu();	
+
+	return 0;
 }
 
 //Main menu with switch for user selection
