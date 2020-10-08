@@ -1,9 +1,7 @@
 //CharacterSheet.cpp
 
 /*
-
 Character Sheet Source file
-
 */
 
 //#includes
