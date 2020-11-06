@@ -46,7 +46,7 @@ Random Character Generator is a simple, text based console program for generatin
 To customize the names used for generating characters you may freely edit the appropiate name list based on race. Each name list has 24 unique names, and must have 24 names for the character generator to work properly. Once you make any changes, make sure to save the name list so the customized names will be available the next time you run the Random Character Generator.
 
 ## Example Screenshots
-![Image] ReadmeImages/MainMenu.png
+![Image] (https://github.com/JonStarritt/RandomCharacterGenerator/blob/main/ReadmeImages/MainMenu.png)
 
 ## Roadmap
 * Add randomly generated subclasses -- **Done**
