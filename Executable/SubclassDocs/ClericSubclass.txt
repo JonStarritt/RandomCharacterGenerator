@@ -1,0 +1,10 @@
+Arcana Domain
+Forge Domain
+Grave Domain
+Knowledge Domain
+Life Domain
+Light Domain
+Nature Domain
+Tempest Domain
+Trickery Domain
+War Domain
