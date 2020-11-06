@@ -1,7 +1,9 @@
 //CharacterSheet.cpp
 
 /*
+
 Character Sheet Source file
+
 */
 
 //#includes
@@ -29,6 +31,7 @@ CharacterSheet::CharacterSheet()
 	name = "Undefined";
 	race = "Undefined";
 	charClass = "Undefined";
+	charSubClass = "Undefined";
 	level = 0;
 	background = "Undefined";
 	alignment = "Undefined";
@@ -82,6 +85,18 @@ string CharacterSheet::GetCharClass()
 void CharacterSheet::SetCharClass(string newCharClass)
 {
 	charClass = newCharClass;
+}
+
+//Get the character subclass
+string CharacterSheet::GetCharSubClass()
+{
+	return charSubClass;
+}
+
+//Set the character subclass
+void CharacterSheet::SetCharSubClass(string newCharSubClass)
+{
+	charSubClass = newCharSubClass;
 }
 
 //Get the character level
@@ -657,6 +672,334 @@ string CharacterSheet::NameByRace()
 	return newName;
 }
 
+//Choose random subclass from appropiate list based on class
+string CharacterSheet::SubByClass()
+{
+	string subForClass = GetCharClass();
+	string subclassDoc;
+	string listSubclass;
+	string newSubclass;
+
+	//Choose correct subclass doc based on class
+	if (subForClass == "Barbarian")
+	{
+		subclassDoc = "SubclassDocs/BarbarianSubclass.txt";
+
+		//Create array of available subclasses and choose one randomly
+		const int arrayNumConst = 6;
+		string arraySubclassList[arrayNumConst];
+		ifstream RandomSubDoc(subclassDoc);
+		int j;
+
+		srand(time(NULL) + time(NULL)); //Initialize the random seed
+
+		if (RandomSubDoc.is_open())
+		{
+			j = 0;
+			while (getline(RandomSubDoc, listSubclass))
+			{
+				arraySubclassList[j] = listSubclass;
+				j += 1;
+			}
+			RandomSubDoc.close();
+		}
+
+		int RandIndexSub = rand() % arrayNumConst; //generates a random number for array index
+		newSubclass = arraySubclassList[RandIndexSub];
+
+	}
+	if (subForClass == "Bard")
+	{
+		subclassDoc = "SubclassDocs/BardSubclass.txt";
+
+		//Create array of available subclasses and choose one randomly
+		const int arrayNumConst = 8;
+		string arraySubclassList[arrayNumConst];
+		ifstream RandomSubDoc(subclassDoc);
+		int j;
+
+		srand(time(NULL) + time(NULL)); //Initialize the random seed
+
+		if (RandomSubDoc.is_open())
+		{
+			j = 0;
+			while (getline(RandomSubDoc, listSubclass))
+			{
+				arraySubclassList[j] = listSubclass;
+				j += 1;
+			}
+			RandomSubDoc.close();
+		}
+
+		int RandIndexSub = rand() % arrayNumConst; //generates a random number for array index
+		newSubclass = arraySubclassList[RandIndexSub];
+
+	}
+
+	if (subForClass == "Cleric")
+	{
+		subclassDoc = "SubclassDocs/ClericSubclass.txt";
+
+		//Create array of available subclasses and choose one randomly
+		const int arrayNumConst = 10;
+		string arraySubclassList[arrayNumConst];
+		ifstream RandomSubDoc(subclassDoc);
+		int j;
+
+		srand(time(NULL) + time(NULL)); //Initialize the random seed
+
+		if (RandomSubDoc.is_open())
+		{
+			j = 0;
+			while (getline(RandomSubDoc, listSubclass))
+			{
+				arraySubclassList[j] = listSubclass;
+				j += 1;
+			}
+			RandomSubDoc.close();
+		}
+
+		int RandIndexSub = rand() % arrayNumConst; //generates a random number for array index
+		newSubclass = arraySubclassList[RandIndexSub];
+	}
+	if (subForClass == "Druid")
+	{
+		subclassDoc = "SubclassDocs/DruidSubclass.txt";
+
+		//Create array of available subclasses and choose one randomly
+		const int arrayNumConst = 5;
+		string arraySubclassList[arrayNumConst];
+		ifstream RandomSubDoc(subclassDoc);
+		int j;
+
+		srand(time(NULL) + time(NULL)); //Initialize the random seed
+
+		if (RandomSubDoc.is_open())
+		{
+			j = 0;
+			while (getline(RandomSubDoc, listSubclass))
+			{
+				arraySubclassList[j] = listSubclass;
+				j += 1;
+			}
+			RandomSubDoc.close();
+		}
+
+		int RandIndexSub = rand() % arrayNumConst; //generates a random number for array index
+		newSubclass = arraySubclassList[RandIndexSub];
+	}
+	if (subForClass == "Fighter")
+	{
+		subclassDoc = "SubclassDocs/FighterSubclass.txt";
+
+		//Create array of available subclasses and choose one randomly
+		const int arrayNumConst = 7;
+		string arraySubclassList[arrayNumConst];
+		ifstream RandomSubDoc(subclassDoc);
+		int j;
+
+		srand(time(NULL) + time(NULL)); //Initialize the random seed
+
+		if (RandomSubDoc.is_open())
+		{
+			j = 0;
+			while (getline(RandomSubDoc, listSubclass))
+			{
+				arraySubclassList[j] = listSubclass;
+				j += 1;
+			}
+			RandomSubDoc.close();
+		}
+
+		int RandIndexSub = rand() % arrayNumConst; //generates a random number for array index
+		newSubclass = arraySubclassList[RandIndexSub];
+	}
+	if (subForClass == "Monk")
+	{
+		subclassDoc = "SubclassDocs/MonkSubclass.txt";
+
+		//Create array of available subclasses and choose one randomly
+		const int arrayNumConst = 7;
+		string arraySubclassList[arrayNumConst];
+		ifstream RandomSubDoc(subclassDoc);
+		int j;
+
+		srand(time(NULL) + time(NULL)); //Initialize the random seed
+
+		if (RandomSubDoc.is_open())
+		{
+			j = 0;
+			while (getline(RandomSubDoc, listSubclass))
+			{
+				arraySubclassList[j] = listSubclass;
+				j += 1;
+			}
+			RandomSubDoc.close();
+		}
+
+		int RandIndexSub = rand() % arrayNumConst; //generates a random number for array index
+		newSubclass = arraySubclassList[RandIndexSub];
+	}
+	if (subForClass == "Paladin")
+	{
+		subclassDoc = "SubclassDocs/PaladinSubclass.txt";
+
+		//Create array of available subclasses and choose one randomly
+		const int arrayNumConst = 6;
+		string arraySubclassList[arrayNumConst];
+		ifstream RandomSubDoc(subclassDoc);
+		int j;
+
+		srand(time(NULL) + time(NULL)); //Initialize the random seed
+
+		if (RandomSubDoc.is_open())
+		{
+			j = 0;
+			while (getline(RandomSubDoc, listSubclass))
+			{
+				arraySubclassList[j] = listSubclass;
+				j += 1;
+			}
+			RandomSubDoc.close();
+		}
+
+		int RandIndexSub = rand() % arrayNumConst; //generates a random number for array index
+		newSubclass = arraySubclassList[RandIndexSub];
+	}
+	if (subForClass == "Ranger")
+	{
+		subclassDoc = "SubclassDocs/RangerSubclass.txt";
+
+		//Create array of available subclasses and choose one randomly
+		const int arrayNumConst = 5;
+		string arraySubclassList[arrayNumConst];
+		ifstream RandomSubDoc(subclassDoc);
+		int j;
+
+		srand(time(NULL) + time(NULL)); //Initialize the random seed
+
+		if (RandomSubDoc.is_open())
+		{
+			j = 0;
+			while (getline(RandomSubDoc, listSubclass))
+			{
+				arraySubclassList[j] = listSubclass;
+				j += 1;
+			}
+			RandomSubDoc.close();
+		}
+
+		int RandIndexSub = rand() % arrayNumConst; //generates a random number for array index
+		newSubclass = arraySubclassList[RandIndexSub];
+	}
+	if (subForClass == "Rogue")
+	{
+		subclassDoc = "SubclassDocs/RogueSubclass.txt";
+
+		//Create array of available subclasses and choose one randomly
+		const int arrayNumConst = 7;
+		string arraySubclassList[arrayNumConst];
+		ifstream RandomSubDoc(subclassDoc);
+		int j;
+
+		srand(time(NULL) + time(NULL)); //Initialize the random seed
+
+		if (RandomSubDoc.is_open())
+		{
+			j = 0;
+			while (getline(RandomSubDoc, listSubclass))
+			{
+				arraySubclassList[j] = listSubclass;
+				j += 1;
+			}
+			RandomSubDoc.close();
+		}
+
+		int RandIndexSub = rand() % arrayNumConst; //generates a random number for array index
+		newSubclass = arraySubclassList[RandIndexSub];
+	}
+	if (subForClass == "Sorcerer")
+	{
+		subclassDoc = "SubclassDocs/SorcererSubclass.txt";
+
+		//Create array of available subclasses and choose one randomly
+		const int arrayNumConst = 5;
+		string arraySubclassList[arrayNumConst];
+		ifstream RandomSubDoc(subclassDoc);
+		int j;
+
+		srand(time(NULL) + time(NULL)); //Initialize the random seed
+
+		if (RandomSubDoc.is_open())
+		{
+			j = 0;
+			while (getline(RandomSubDoc, listSubclass))
+			{
+				arraySubclassList[j] = listSubclass;
+				j += 1;
+			}
+			RandomSubDoc.close();
+		}
+
+		int RandIndexSub = rand() % arrayNumConst; //generates a random number for array index
+		newSubclass = arraySubclassList[RandIndexSub];
+	}
+	if (subForClass == "Warlock")
+	{
+		subclassDoc = "SubclassDocs/WarlockSubclass.txt";
+
+		//Create array of available subclasses and choose one randomly
+		const int arrayNumConst = 5;
+		string arraySubclassList[arrayNumConst];
+		ifstream RandomSubDoc(subclassDoc);
+		int j;
+
+		srand(time(NULL) + time(NULL)); //Initialize the random seed
+
+		if (RandomSubDoc.is_open())
+		{
+			j = 0;
+			while (getline(RandomSubDoc, listSubclass))
+			{
+				arraySubclassList[j] = listSubclass;
+				j += 1;
+			}
+			RandomSubDoc.close();
+		}
+
+		int RandIndexSub = rand() % arrayNumConst; //generates a random number for array index
+		newSubclass = arraySubclassList[RandIndexSub];
+	}
+	if (subForClass == "Wizard")
+	{
+		subclassDoc = "SubclassDocs/WizardSubclass.txt";
+
+		//Create array of available subclasses and choose one randomly
+		const int arrayNumConst = 10;
+		string arraySubclassList[arrayNumConst];
+		ifstream RandomSubDoc(subclassDoc);
+		int j;
+
+		srand(time(NULL) + time(NULL)); //Initialize the random seed
+
+		if (RandomSubDoc.is_open())
+		{
+			j = 0;
+			while (getline(RandomSubDoc, listSubclass))
+			{
+				arraySubclassList[j] = listSubclass;
+				j += 1;
+			}
+			RandomSubDoc.close();
+		}
+
+		int RandIndexSub = rand() % arrayNumConst; //generates a random number for array index
+		newSubclass = arraySubclassList[RandIndexSub];
+	}
+
+	return newSubclass;
+}
+
 // ****************************************
 
 //Print character details to the screen
@@ -665,6 +1008,7 @@ void CharacterSheet::PrintDetails()
 	cout << "\nName: " << GetName();
 	cout << "\nRace: " << GetRace();
 	cout << "\nClass: " << GetCharClass();
+	cout << "\nSubclass: " << GetCharSubClass();
 	cout << "\nLevel: " << GetLevel();
 	cout << "\nBackground: " << GetBackground();
 	cout << "\nAlignment: " << GetAlignment();
@@ -688,6 +1032,7 @@ void CharacterSheet::PrintLimitedDetails()
 	cout << "\n\nName: " << GetName();
 	cout << "\nRace: " << GetRace();
 	cout << "\nClass: " << GetCharClass();
+	cout << "\nSubclass: " << GetCharSubClass();
 	cout << "\nLevel: " << GetLevel();
 	cout << "\nBackground: " << GetBackground();
 	cout << "\nAlignment: " << GetAlignment();
