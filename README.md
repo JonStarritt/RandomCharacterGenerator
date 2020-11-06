@@ -34,7 +34,7 @@ Random Character Generator is a simple, text based console program for generatin
 
 
 ### Detailed Instructions 
-1. Copy the "RandomNameDocs" and "SavedNameLists" folders into the same location as the ".exe" you built from source.
+1. Copy the "RandomNameDocs", "SavedNameLists", and "SubclassDocs" folders into the same location as the ".exe" you built from source.
 2. Run the ".exe".
 3. Characters you choose to save are located in the the appropiate document in the "SavedNameLists" folder which you copied to the location of the ".exe".
 
