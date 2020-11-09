@@ -50,20 +50,23 @@ To customize the names used for generating characters you may freely edit the ap
 ![Main Menu](https://github.com/JonStarritt/RandomCharacterGenerator/blob/main/ReadmeImages/MainMenu.png)
 
 ### Generating AL character
-![AL Character](https://github.com/JonStarritt/RandomCharacterGenerator/blob/main/ReadmeImages/ALCharacter.png)
+![AL Character](https://github.com/JonStarritt/RandomCharacterGenerator/blob/main/ReadmeImages/ALCharacter20201108.png)
 
 ### Saving random character
-![Save Character](https://github.com/JonStarritt/RandomCharacterGenerator/blob/main/ReadmeImages/SaveCharacter.png)
+![Save Character](https://github.com/JonStarritt/RandomCharacterGenerator/blob/main/ReadmeImages/SaveCharacter20201108.png)
 
 ### Creating another character
-![Next Character](https://github.com/JonStarritt/RandomCharacterGenerator/blob/main/ReadmeImages/NextCharacter.png)
+![Next Character](https://github.com/JonStarritt/RandomCharacterGenerator/blob/main/ReadmeImages/NextCharacter20201108.png)
 
 ### List of saved characters
-![Character List](https://github.com/JonStarritt/RandomCharacterGenerator/blob/main/ReadmeImages/CharacterList.png)
+![Character List](https://github.com/JonStarritt/RandomCharacterGenerator/blob/main/ReadmeImages/CharacterList20201108.png)
 
 ## Roadmap
 * Add randomly generated subclasses -- **Done**
-* Add the ability to randomly generate ability scores based on the character's race and class
+* Add the ability to randomly generate ability scores based on the character's race and class -- **Done**
+* Calculate ability score modifiers based on race and class -- **Done**
+* Add Armor class and Armor types -- **Done**
+* Reformat the output both on screen and in the saved data files -- **Done**
 * Modify the random name generation to not need a set number of names on the list
 * Whatever else I think to add
 
