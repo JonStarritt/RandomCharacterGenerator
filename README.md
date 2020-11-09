@@ -1,12 +1,22 @@
 # Random Character Generator
-Random Character Generator is a simple, text based console program for generating random characters and NPCs for the Dungeons and Dragons tabletop roleplaying game. 
+Random Character Generator is a simple, text based console program for generating random player characters and non-player characters (NPCs) for the Dungeons and Dragons (D&D) tabletop roleplaying game. 
+
+## Purpose
+The initial purpose for this program was to help Dungeon Masters (DM) quickly generate NPCs without having to manualy calculate ability scores and armor classes. Since beginning development, the purpose has expanded to include being a source of inspiration for anyone creating a D&D character.
+
+Once a character is generated, the player or DM can create a backstory and use the randomly generated character, or use the generated character as inspiration and modify any of the details to better fit the theme or story of the adventure.
 
 ## Features
-#### Create two types of player characters using "Adventurers League" rules and NPCs. 
-1. Adventurers League Seasons 1-9
-2. Adventurers League Season 10
+* #### Quickly iterate through creating random characters for both player and DM use.
 
-#### Save randomly generated characters to the appropriate list for future reference.
+* #### Create two types of player characters using "Adventurers League" (AL) rules and NPCs. 
+   * Adventurers League Seasons 1-9
+   * Adventurers League Season 10
+   * Non-player Characters (NPC)
+
+* #### Randomly generated ability scores and armor types, modified based on race, subrace, class, and subclass.
+
+* #### Save randomly generated character data to a list for future reference.
 
 ## Installation
 
@@ -39,6 +49,22 @@ Random Character Generator is a simple, text based console program for generatin
 3. Characters you choose to save are located in the the appropiate document in the "SavedNameLists" folder which you copied to the location of the ".exe".
 
 #### If the Random Character Generator does not run on your computer, you may need to run the "vcredist_x86.exe" file from the "Redistributable" folder. It is a file directly from Microsoft for running C++ code on computers without Visual Studio installed.
+
+## Character Race and Alignment
+Adventurers League restrictions for the character's race and alignment have been implemented. Player characters have less options available for Season 10 (Starting September 2020) than they do for Season 9 (Starting September 2019) and older seasons of adventure.
+
+However when creating an NPC, all of the official race and alignment options are available as NPCs are not season locked like player characters.
+
+## Ability Scores/Armor Class/Proficency Bonus/Initiative/Speed
+The ability scores use the standard array (15, 14, 13, 12, 10, 8) found in the Player's Handbook (PHB) per AL rules. The scores are generated with '15' and '14' being set to the primary and secondary abilities, respectively, based on the class descriptions in the PHB. The other scores (13, 12, 10, 8) are randomized and set to the remaining abilities. The ability scores are modified further by the character's race and subrace bonuses, if applicable. 
+
+Armor type and armor class are based on the starting equipment listed in the PHB for each character class. If a class has multiple options for starting armor, like the Cleric, the available options are randomized before an armor type is selected and the armor class calculated.
+
+Proficency bonus is based on character level, and follows the character advancement as detailed in the PHB.
+
+Initiative is based on the Dexterity modifier.
+
+Speed is taken directly from the race descriptions in their respective source book.
 
 ## Customizing data for generated characters
 
