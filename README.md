@@ -6,6 +6,9 @@ The initial purpose for this program was to help Dungeon Masters (DM) quickly ge
 
 Once a character is generated, the player or DM can create a backstory and use the randomly generated character, or use the generated character as inspiration and modify any of the details to better fit the theme or story of the adventure.
 
+#### AL character example
+![AL Character Example](https://github.com/JonStarritt/RandomCharacterGenerator/blob/main/ReadmeImages/ALCharacterSample.png)
+
 ## Features
 * #### Quickly iterate through creating random characters for both player and DM use.
 
@@ -72,19 +75,19 @@ Speed is taken directly from the race descriptions in their respective source bo
 To customize the names used for generating characters you may freely edit the appropiate name list based on race. Each name list has 24 unique names, and must have 24 names for the character generator to work properly. Once you make any changes, make sure to save the name list so the customized names will be available the next time you run the Random Character Generator.
 
 ## Example Screenshots
-### Main Menu
+#### Main Menu
 ![Main Menu](https://github.com/JonStarritt/RandomCharacterGenerator/blob/main/ReadmeImages/MainMenu.png)
 
-### Generating AL character
+#### Generating AL character
 ![AL Character](https://github.com/JonStarritt/RandomCharacterGenerator/blob/main/ReadmeImages/ALCharacter20201108.png)
 
-### Saving random character
+#### Saving random character
 ![Save Character](https://github.com/JonStarritt/RandomCharacterGenerator/blob/main/ReadmeImages/SaveCharacter20201108.png)
 
-### Creating another character
+#### Creating another character
 ![Next Character](https://github.com/JonStarritt/RandomCharacterGenerator/blob/main/ReadmeImages/NextCharacter20201108.png)
 
-### List of saved characters
+#### List of saved characters
 ![Character List](https://github.com/JonStarritt/RandomCharacterGenerator/blob/main/ReadmeImages/CharacterList20201108.png)
 
 ## Roadmap
