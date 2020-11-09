@@ -32,7 +32,6 @@ using std::right;
 
 //Prototypes
 void mainMenu();
-void CreateNewChar();
 void GenerateRandomALChar();
 void GenerateRandomALCharS10();
 void GenerateRandomNPC();
@@ -93,19 +92,45 @@ void mainMenu()
 void GenerateRandomALChar()
 {
 	{
+		NewCharacter.SetLevel(1);
+		
 		NewCharacter.RandomRace();
 		
 		NewCharacter.SetName(NewCharacter.NameByRace());
 
 		NewCharacter.RandomCharClass();
 
-		NewCharacter.SetLevel(1);
+		NewCharacter.SetCharSubClass(NewCharacter.SubByClass());
+
+		
 
 		NewCharacter.RandomBackground();
 
 		NewCharacter.RandomAlignmentAL();
 
-		NewCharacter.PrintLimitedDetails();
+		NewCharacter.RandomAbilityScores();
+
+
+
+		NewCharacter.RacialBonuses();
+
+		NewCharacter.CalcSubraceBonus();
+
+		NewCharacter.CalcAbilityScoreMods();
+
+		NewCharacter.CalcProficencyBonus();		
+
+		NewCharacter.CalcInitiative();
+
+
+
+		NewCharacter.CalcArmorType();
+		
+		NewCharacter.CalcArmorClass();
+
+		NewCharacter.CalcSpeed();		
+
+		NewCharacter.PrintDetails();
 		
 		SaveNextQuitMenu();
 	}
@@ -117,19 +142,45 @@ void GenerateRandomALChar()
 void GenerateRandomALCharS10()
 {
 	{
+		NewCharacter.SetLevel(1);
+
 		NewCharacter.RandomRaceS10();
-		
+
 		NewCharacter.SetName(NewCharacter.NameByRace());
 
 		NewCharacter.RandomCharClass();
 
-		NewCharacter.SetLevel(1);
+		NewCharacter.SetCharSubClass(NewCharacter.SubByClass());
+
+
 
 		NewCharacter.RandomBackground();
 
 		NewCharacter.RandomAlignmentALS10();
 
-		NewCharacter.PrintLimitedDetails();
+		NewCharacter.RandomAbilityScores();
+
+
+
+		NewCharacter.RacialBonuses();
+
+		NewCharacter.CalcSubraceBonus();
+
+		NewCharacter.CalcAbilityScoreMods();
+
+		NewCharacter.CalcProficencyBonus();
+
+		NewCharacter.CalcInitiative();
+
+
+
+		NewCharacter.CalcArmorType();
+
+		NewCharacter.CalcArmorClass();
+
+		NewCharacter.CalcSpeed();
+
+		NewCharacter.PrintDetails();
 
 		SaveNextQuitMenu();
 	}
@@ -141,19 +192,45 @@ void GenerateRandomALCharS10()
 void GenerateRandomNPC()
 {
 	{
+		NewCharacter.SetLevel(1);
+
 		NewCharacter.RandomNPCRace();
-		
-		NewCharacter.SetName(NewCharacter.NameByRace());		
+
+		NewCharacter.SetName(NewCharacter.NameByRace());
 
 		NewCharacter.RandomCharClass();
 
-		NewCharacter.SetLevel(1);
+		NewCharacter.SetCharSubClass(NewCharacter.SubByClass());
+
+
 
 		NewCharacter.RandomBackground();
 
 		NewCharacter.RandomAlignment();
 
-		NewCharacter.PrintLimitedDetails();
+		NewCharacter.RandomAbilityScores();
+
+
+
+		NewCharacter.RacialBonuses();
+
+		NewCharacter.CalcSubraceBonus();
+
+		NewCharacter.CalcAbilityScoreMods();
+
+		NewCharacter.CalcProficencyBonus();
+
+		NewCharacter.CalcInitiative();
+
+
+
+		NewCharacter.CalcArmorType();
+
+		NewCharacter.CalcArmorClass();
+
+		NewCharacter.CalcSpeed();
+
+		NewCharacter.PrintDetails();
 
 		SaveNextQuitMenu();
 	}
@@ -235,11 +312,20 @@ void SaveToFile()
 		ALCharList.open("SavedNameLists/0_NPCList.txt", ios::app);
 	}
 
-	ALCharList << right << setw(33) << NewCharacter.GetName() << "||"
-				<< left << setw(12) << NewCharacter.GetRace() << "||"
-				<< left << setw(9) << NewCharacter.GetCharClass() << "||"
-				<< left << setw(21) << NewCharacter.GetBackground() << "||"
-				<< left << setw(15) << NewCharacter.GetAlignment() << "\n";
+	ALCharList << "\n\n***********************************************************************************" << "\n"
+		<< "*Name: " << left << setw(33) << NewCharacter.GetName() << "\tLevel: " << NewCharacter.GetLevel()
+		<< "\n*Race: " << left << setw(12) << NewCharacter.GetRace() << "\t\t\t\tSubrace: " << left << setw(30) << NewCharacter.GetSubrace()
+		<< "\n*Class: " << left << setw(9) << NewCharacter.GetCharClass() << "\t\t\t\tSubclass: " << left << setw(30) << NewCharacter.GetCharSubClass()
+		<< "\n*Background: " << left << setw(21) << NewCharacter.GetBackground() << "\t\tAlignment: " << left << setw(15) << NewCharacter.GetAlignment()
+		<< "\n*---------------------------------------------------------------------------------" << "\n"
+		<< "*Armor Type: " << NewCharacter.GetArmorType() << "\t\t\t\tArmor Class: " << NewCharacter.GetArmorClass()
+		<< "\n*Initiative: " << NewCharacter.GetInitiative() << "\t\t\t\t\tSpeed: " << NewCharacter.GetSpeed()
+		<< "\n*Proficency Bonus: " << NewCharacter.GetProficencyBonus() 
+		<< "\n*---------------------------------------------------------------------------------" << "\n"
+		<< "*Strength: " << NewCharacter.GetStrength() << "\t\t\t\t\tIntelligence: " << NewCharacter.GetIntelligence()
+		<< "\n*Dexterity: " << NewCharacter.GetDexterity() << "\t\t\t\t\tWisdom: " << NewCharacter.GetWisdom()
+		<< "\n*Constitution: " << NewCharacter.GetConstitution() << "\t\t\t\tCharisma: " << NewCharacter.GetCharisma()
+		<< "\n***********************************************************************************";
 	ALCharList.close();
 }
 
